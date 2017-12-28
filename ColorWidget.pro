@@ -30,5 +30,11 @@ SOURCES += \
 HEADERS += \
         mainwindow.h
 
+RC_FILE += \
+    colorwidget.rc
+
 FORMS += \
         mainwindow.ui
+
+RESOURCES += \
+    resources.qrc

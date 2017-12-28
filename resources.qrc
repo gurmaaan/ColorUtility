@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/color_preset.png</file>
+        <file>icons/custom.png</file>
+        <file>icons/random.png</file>
+        <file>favicon.ico</file>
+        <file>icons/color.png</file>
+    </qresource>
+</RCC>

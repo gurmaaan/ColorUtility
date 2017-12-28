@@ -15,6 +15,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_left_color_picker_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
