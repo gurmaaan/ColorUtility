@@ -12,4 +12,19 @@
 
 ## Скриншот:
   
+  ![xui][sc-1]
+  
+[sc-1]: https://github.com/gurmaaan/ColorWidget/blob/master/screenshot-1.png?raw=true
+"Screenshot 1"
+
+![alt text][sc-2]
+
+[sc-2]:https://github.com/gurmaaan/ColorWidget/blob/master/screenshot-2.png?raw=true
+"Screenshot 2"
+
+![alt text][sc-2]
+
+![](https://github.com/gurmaaan/ColorWidget/blob/master/screenshot-3.png?raw=true)
+
+
 # Задание по цветовому восприятию
