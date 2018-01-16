@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = ColorWidget
+TARGET = ColorUtility
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,16 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    QColorProvider/qcolorprovider.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    QColorProvider/qcolorprovider.h
 
 RC_FILE += \
     colorwidget.rc
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    QColorProvider/qcolorprovider.ui
 
 RESOURCES += \
     resources.qrc
