@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QColor>
+#include <QColorDialog>
 
 namespace Ui {
 class QColorProvider;

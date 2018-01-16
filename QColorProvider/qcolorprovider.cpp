@@ -82,7 +82,8 @@ void QColorProvider::on_random_btn_clicked()
 
 void QColorProvider::on_color_pickr_btn_clicked()
 {
-
+    _color = QColorDialog::getColor(_color, this);
+    emit colorUpdated();
 }
 
 void QColorProvider::synch()
@@ -171,9 +172,9 @@ void QColorProvider::on_r_step_combo_activated(int index)
 
 void QColorProvider::on_g_step_combo_activated(int index)
 {
-    ui->g_slider->setSingleStep( getStep(index) );
-    ui->g_spin->setSingleStep( getStep(index) ) ;
-    qDebug() << ui->g_slider->singleStep();
+    const int step = getStep(index);
+    ui->g_slider->setPageStep(step);
+    ui->g_slider->setTickInterval(step);
 }
 
 void QColorProvider::on_b_step_combo_activated(int index)
