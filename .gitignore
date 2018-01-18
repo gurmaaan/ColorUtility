@@ -1,1 +1,3 @@
-ColorUtility.pro.user
+*.user
+ColorUtilityInstaller/packages/com.github.gurmaaan.colorutility/data/ColorUtility.exe
+ColorUtilityInstaller/

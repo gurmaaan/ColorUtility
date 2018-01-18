@@ -41,3 +41,5 @@ FORMS += \
 
 RESOURCES += \
     resources.qrc
+
+QMAKE_POST_LINK = $$(QTDIR)/bin/windeployqt $$OUT_PWD/../../ColorUtilityRelease

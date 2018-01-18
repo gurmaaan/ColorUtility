@@ -1,6 +1,5 @@
 #include "qcolorprovider.h"
 #include "ui_qcolorprovider.h"
-#include <QDebug>
 
 //------------Constants------------//
 
@@ -37,37 +36,37 @@ QColorProvider::~QColorProvider()
 void QColorProvider::on_r_slider_sliderMoved(int position)
 {
     _color.setRed(position);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_r_spin_valueChanged(int arg1)
 {
     _color.setRed(arg1);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_g_slider_sliderMoved(int position)
 {
     _color.setGreen(position);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_g_spin_valueChanged(int arg1)
 {
     _color.setGreen(arg1);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_b_slider_sliderMoved(int position)
 {
     _color.setBlue(position);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_b_spin_valueChanged(int arg1)
 {
     _color.setBlue(arg1);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_random_btn_clicked()
@@ -77,13 +76,13 @@ void QColorProvider::on_random_btn_clicked()
         blue_rand = qrand() % 256;
 
     _color.setRgb(red_rand, green_rand, blue_rand);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::on_color_pickr_btn_clicked()
 {
     _color = QColorDialog::getColor(_color, this);
-    emit colorUpdated();
+    emit colorUpdated(_color);
 }
 
 void QColorProvider::synch()
@@ -128,13 +127,15 @@ int QColorProvider::getStep(int index)
     case 3:
         step = 10;
         break;
+    default:
+        step = 1;
     }
 
-    qDebug() << "Index - " << index << "; Step - " << step << ";";
+    //qDebug() << "Index - " << index << "; Step - " << step << ";";
     return step;
 }
 
-bool QColorProvider::clickable() const
+bool QColorProvider::checkable() const
 {
     return _checkable;
 }
@@ -167,7 +168,7 @@ void QColorProvider::on_r_step_combo_activated(int index)
 {
     ui->r_slider->setSingleStep( getStep(index) );
     ui->r_spin->setSingleStep( getStep(index) );
-    qDebug() << ui->r_slider->singleStep();
+    //qDebug() << ui->r_slider->singleStep();
 }
 
 void QColorProvider::on_g_step_combo_activated(int index)
@@ -181,5 +182,5 @@ void QColorProvider::on_b_step_combo_activated(int index)
 {
     ui->b_slider->setSingleStep( getStep(index) );
     ui->b_spin->setSingleStep( getStep(index) );
-    qDebug() << ui->b_slider->singleStep();
+    //qDebug() << ui->b_slider->singleStep();
 }

@@ -13,12 +13,14 @@
 #define BG_TITLE "Фон"
 #endif
 
-#include <QColorDialog>
 #include <QScreen>
 #include <QDesktopWidget>
 #include <QMainWindow>
 #include <QDebug>
 #include <QString>
+#include <QTimer>
+#include <QGraphicsScene>
+#include <QGraphicsItemGroup>
 
 namespace Ui {
 class MainWindow;
@@ -32,8 +34,16 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+public slots:
+    void genGraphics();
+
+    void clearGroup(QGraphicsItemGroup *group);
+    void repaintBgGroup(const QColor &color);
+    void repaintRightGroup(const QColor &color);
+    void repaintLeftGroup(const QColor &color);
+
 private slots:
-    void on_left_color_picker_clicked();
+    void on_combination_slider_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;
@@ -43,6 +53,11 @@ private:
     int _lAreaW = 0, _lAreaH = 0,
         _rAreaW = 0, _rAreaH = 0;
     int _combW;
+
+    QGraphicsScene *scene;
+    QGraphicsItemGroup *groupLeft;
+    QGraphicsItemGroup *groupRight;
+    QGraphicsItemGroup *groupBG;
 };
 
 #endif // MAINWINDOW_H

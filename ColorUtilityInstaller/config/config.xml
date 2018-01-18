@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>Утилита подбора цветов</Name>
+    <Version>1.0.0</Version>
+    <Title>Утилита подбора дополнительного цвета</Title>
+    <Publisher>Dmitry Gurov </Publisher>
+    <ProductUrl>https://github.com/gurmaaan/ColorUtility</ProductUrl>
+    <InstallerWindowIcon>favicon.png</InstallerWindowIcon>
+    <InstallerApplicationIcon>favicon.ico</InstallerApplicationIcon>
+    <WizardStyle>Mac</WizardStyle>
+    <!-- Directory name is used in component.xml -->
+    <StartMenuDir>ColorUtility</StartMenuDir>
+    <TargetDir>@HomeDir@/ColorUtility</TargetDir>
+</Installer>
+C:\Users\dmvgu\YandexDisk\EDUCATION\SOI\ColorUtility\icons\favicon.png

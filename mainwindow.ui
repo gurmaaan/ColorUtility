@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1094</width>
+    <width>1232</width>
     <height>865</height>
    </rect>
   </property>
@@ -44,7 +44,7 @@
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <layout class="QVBoxLayout" name="verticalLayout">
             <property name="sizeConstraint">
              <enum>QLayout::SetMinimumSize</enum>
@@ -189,7 +189,7 @@
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
              <spacer name="horizontalSpacer_4">
@@ -311,6 +311,9 @@
                    <property name="text">
                     <string>Экран</string>
                    </property>
+                   <property name="buddy">
+                    <cstring>screen_w_spin</cstring>
+                   </property>
                   </widget>
                  </item>
                  <item>
@@ -356,6 +359,9 @@
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
+                     <property name="buddy">
+                      <cstring>screen_h_spin</cstring>
+                     </property>
                     </widget>
                    </item>
                    <item>
@@ -398,6 +404,9 @@
                    </property>
                    <property name="text">
                     <string>Левая область</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>left_w_spin</cstring>
                    </property>
                   </widget>
                  </item>
@@ -444,6 +453,9 @@
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
+                     <property name="buddy">
+                      <cstring>left_h_spin</cstring>
+                     </property>
                     </widget>
                    </item>
                    <item>
@@ -486,6 +498,9 @@
                    </property>
                    <property name="text">
                     <string>Правая область</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>right_w_spin</cstring>
                    </property>
                   </widget>
                  </item>
@@ -531,6 +546,9 @@
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="buddy">
+                      <cstring>right_h_spin</cstring>
                      </property>
                     </widget>
                    </item>
@@ -587,6 +605,24 @@
        <attribute name="title">
         <string>Цветовое восприятие</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources.qrc">:/images/Task2.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -613,12 +649,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>404</y>
+     <x>320</x>
+     <y>403</y>
     </hint>
     <hint type="destinationlabel">
-     <x>701</x>
-     <y>409</y>
+     <x>239</x>
+     <y>368</y>
     </hint>
    </hints>
   </connection>
@@ -629,12 +665,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>314</x>
-     <y>408</y>
+     <x>339</x>
+     <y>403</y>
     </hint>
     <hint type="destinationlabel">
-     <x>715</x>
-     <y>410</y>
+     <x>239</x>
+     <y>368</y>
     </hint>
    </hints>
   </connection>
@@ -645,12 +681,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>699</x>
-     <y>399</y>
+     <x>239</x>
+     <y>368</y>
     </hint>
     <hint type="destinationlabel">
-     <x>491</x>
-     <y>418</y>
+     <x>516</x>
+     <y>403</y>
     </hint>
    </hints>
   </connection>

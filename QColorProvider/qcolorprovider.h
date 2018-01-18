@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QColor>
+#include <QDebug>
 #include <QColorDialog>
 
 namespace Ui {
@@ -22,8 +23,8 @@ public:
     QString title() const;
     void setTitle(const QString &title);
 
-    bool clickable() const;
-    void setCheckable(bool clickable);
+    bool checkable() const;
+    void setCheckable(bool checkable);
 
 private slots:
     void on_r_slider_sliderMoved(int position);
@@ -43,7 +44,7 @@ private slots:
     void synch();
 
 signals:
-    void colorUpdated();
+    void colorUpdated(const QColor &newColor);
 
 private:
     Ui::QColorProvider *ui;
